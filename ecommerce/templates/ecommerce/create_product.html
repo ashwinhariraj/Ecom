@@ -1,0 +1,13 @@
+<!-- ecommerce/templates/ecommerce/product_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>My Products</h2>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+    {% empty %}
+        <li>No products available.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
